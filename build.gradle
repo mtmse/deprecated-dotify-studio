@@ -91,13 +91,15 @@ dependencies {
 	testImplementation group: 'junit', name: 'junit', version: "4.12"
 
 	runtimeOnly 'org.slf4j:slf4j-jdk14:1.7.2'
-	runtimeOnly ('org.daisy.dotify:dotify.formatter.impl:5.0.1') {
+	// This snapshot-version includes a bug fix handling null locales.
+	runtimeOnly ('org.daisy.dotify:dotify.formatter.impl:5.0.5-SNAPSHOT') {
 		exclude module: 'Saxon-HE'
 	}
 	runtimeOnly 'org.daisy.dotify:dotify.hyphenator.impl:5.0.0'
 	runtimeOnly 'org.daisy.dotify:dotify.text.impl:5.0.0'
 	runtimeOnly 'org.daisy.dotify:dotify.translator.impl:5.1.1'
-	runtimeOnly ('org.daisy.dotify:dotify.task.impl:5.0.0') {
+	// Snapshot version includes various fixes including toc-block wrapper
+	runtimeOnly ('org.daisy.dotify:dotify.task.impl:5.0.1-SNAPSHOT') {
 		exclude module: 'Saxon-HE'
 	}
 	runtimeOnly 'org.daisy.braille:braille-utils.impl:7.0.0'
